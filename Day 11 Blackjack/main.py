@@ -20,7 +20,7 @@
 ##################### Hints #####################
 from art import logo
 import random
-import replit
+from replit import clear
 
 def blackjack():
   print(logo)
@@ -108,7 +108,7 @@ def blackjack():
     if computer_score == user_score:
       print("draw")
     elif computer_score == 0:
-      print("Lose, opponent has Blackjack 😱")
+      print("You lose, opponent has Blackjack 😱")
     elif user_score == 0:
       print("BlackJack, You WIN! 😎")
     elif user_score > 21:
@@ -116,23 +116,13 @@ def blackjack():
     elif computer_score > 21:
       print("Opponent went over. You win 😁")
     elif computer_score > user_score:
-      print("You lose 😤")
+      print("You lose! 😤")
     elif user_score > computer_score:
       print("You Win!")
   
   compare(user_score, computer_score)
   #Hint 14: Ask the user if they want to restart the game. If they answer yes, clear the console and start a new game of blackjack and show the logo from art.py
-  repeat_game = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
-  if repeat_game == 'y':
-    replit.clear()
-    blackjack()
 
-play_game = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
-if play_game == 'y':
+while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == 'y':
+  clear()
   blackjack()
-
-
-  
-  
-  
- 
