@@ -96,13 +96,9 @@ def blackjack():
   
   #Hint 12: Once the user is done, it's time to let the computer play. The computer should keep drawing cards as long as it has a score less than 17.
   
-  computer_game_over = False
-  while not computer_game_over:
+  while computer_score != 0 and computer_score < 17:
     computer_cards.append(deal_card())
     computer_score = calculate_score(computer_cards)
-  
-    if computer_score > 17:
-      computer_game_over = True
     
   print(f"Your final hand: {user_cards}, final score: {user_score}")
   print(f"Computer's final hand: {computer_cards}, final score: {computer_score}")
